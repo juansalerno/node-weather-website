@@ -73,16 +73,17 @@ app.get('/weather', (req, res) => {
 
 })
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        })
-    }
+app.get('/weather/currentLocation', (req, res) => {
+    
+    forecast(req.query.latitude, req.query.longitude, (error, forecastData) => {
+        if (error) {
+            return res.send({ error })
+        }
 
-    console.log(req.query.search)
-    res.send({
-        products: []
+        res.send({
+            forecast: forecastData
+        })
+
     })
 })
 

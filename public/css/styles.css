@@ -46,10 +46,19 @@ input {
     padding: 8px;
 }
 
-button {
+.search-location-btn {
     cursor: pointer;
     border: 1px solid #888888;
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+.current-location-btn {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    margin-top: 3%;
 }
